@@ -79,7 +79,7 @@ TransLogi/
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/TransLogi.git
+   git clone https://github.com/Brettb8711/TransLogi_Traffic_Prediction.git
    cd TransLogi
    ```
 2. Build and run the Docker containers:
