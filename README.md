@@ -64,8 +64,7 @@ TransLogi/
 │   ├── Dockerfile           # Dockerfile for individual services
 │   ├── docker-compose.yml   # Orchestration configuration
 ├── tests/                   # Unit and integration tests
-├── README.md                # Project documentation
-└── demo.mp4                 # Video demonstration
+└──README.md                # Project documentation
 ```
 
 ---
@@ -105,16 +104,6 @@ pytest tests/
 ### Algorithms
 - **Predictive Modeling**: Gradient Boosting, LSTMs for time-series data.
 - **Route Optimization**: Google OR-Tools for VRP solutions.
-
----
-
-## Contributions
-Contributions are welcome! Please submit a pull request with a detailed description of your changes.
-
----
-
-## License
-This project is licensed under the MIT License.
 
 ---
 
