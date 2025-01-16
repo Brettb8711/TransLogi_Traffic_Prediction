@@ -1,15 +1,24 @@
 import requests
+import sqlalchemy
 from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
+import datetime
 
 # PostgreSQL connection string
-DATABASE_URL = "postgresql+psycopg2://username:password@localhost:5432/translogi"
+DATABASE_URL = "postgresql+psycopg2://postgres:Sp33zer1993!@localhost:5432/translogi"
 
 # Initialize engine, base, and session
 engine = create_engine(DATABASE_URL)
-Base = declarative_base()
+
+try:
+    with engine.connect() as connection:
+        print("Connected to the database successfully!")
+except Exception as e:
+    print(f"Error connecting to the database: {e}")
+
+Base = sqlalchemy.orm.declarative_base()
 Session = sessionmaker(bind=engine)
 session = Session()
 
@@ -25,10 +34,10 @@ class DeliveryTransaction(Base):
     weather_conditions = Column(String)
 
 # Create table in the database
-Base.metadata.create_all(engine)
+#Base.metadata.create_all(engine)
 
-def fetch_traffic_data(api_key, location):
-    url = f"https://maps.googleapis.com/maps/api/traffic/json?location={location}&key={api_key}"
+def fetch_traffic_data(api_key, location, destination):
+    url = f"https://maps.googleapis.com/maps/api/directions/json?departure_time={datetime.now()}&destination={destination}&origin'{location}&key={api_key}"
     response = requests.get(url)
     if response.status_code == 200:
         return response.json()
@@ -50,8 +59,9 @@ def save_transaction_data(session, data):
 
 if __name__ == "__main__":
     api_key = os.getenv('GOOGLE_MAPS_API_KEY')
-    location = "40.7128,-74.0060"  # Example: New York City coordinates
-    traffic_data = fetch_traffic_data(api_key, location)
+    location = "40.7128,-74.0060"  
+    destination = "40.7538,-74.0020"
+    traffic_data = fetch_traffic_data(api_key, location, destination)
 
     if traffic_data:
         # Example parsed data to save

@@ -108,5 +108,7 @@ pytest tests/
 ---
 
 ## Acknowledgments
-Special thanks to the developers of Google Maps API, OpenWeatherMap, and Google OR-Tools for their robust tools that make this project possible.
+Special thanks to the developers of Google Maps API, OpenWeatherMap, Sujal Suthar for the traffic data, and Google OR-Tools for their robust tools that make this project possible.
+
+Traffic Data link = https://www.kaggle.com/datasets/sujalsuthar/amazon-delivery-dataset
 
