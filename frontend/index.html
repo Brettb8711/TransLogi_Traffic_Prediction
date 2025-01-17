@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <title>Logistics Optimization</title>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-    <h1>Route Optimization</h1>
+    <h1>Translogi Route Optimization</h1>
     <form id="routeForm">
         <label for="warehouse">Warehouse Location:</label>
         <input type="text" id="warehouse" name="warehouse" required><br>
@@ -14,20 +14,45 @@
         <input type="text" id="destinations" name="destinations" required><br>
         <button type="submit">Optimize Routes</button>
     </form>
-    <div id="map" style="height: 400px;"></div>
+    <div id="map" style="height: 500px;"></div>
     <script>
-        document.getElementById('routeForm').onsubmit = async function(event) {
-            event.preventDefault();
-            const warehouse = document.getElementById('warehouse').value;
-            const destinations = document.getElementById('destinations').value.split(',');
 
-            const response = await fetch('http://localhost:5000/optimize', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ warehouse, destinations }),
-            });
-            const data = await response.json();
-            console.log(data); // Display routes in console for now
+      const map = L.map('map').setView([40.7128, -74.0060], 12); // Default NYC
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+      }).addTo(map);
+
+      // Add a test marker to check map rendering
+      //L.marker([40.7128, -74.0060]).addTo(map).bindPopup("Test Marker").openPopup();
+
+      document.getElementById('routeForm').onsubmit = async function(event) {
+        event.preventDefault();
+          const warehouse = document.getElementById('warehouse').value;
+          const destination = document.getElementById('destinations').value;
+
+          console.log("Form Submitted:", { warehouse, destination }); // Log inputs
+
+          // Fetch route data from backend
+          const response = await fetch('http://localhost:5000/get_route', {
+            method: 'POST',
+            headers: {
+                  'Content-Type': 'application/json',  // This header tells the backend you're sending JSON
+              },
+              body: JSON.stringify({ warehouse, destination }),  // Ensure the body is correctly stringified JSON
+          });
+
+          console.log("Response Status:", response.status); // Log response status
+          const data = await response.json();
+          console.log("Response Data:", data); // Log backend response
+
+          // Draw route on the map
+          if (data.error) {
+          console.error("Backend Error:", data.error);
+          } else {
+            const routeCoords = data.route.map(([lat, lng]) => [lat, lng]);
+            const polyline = L.polyline(routeCoords, { color: 'blue' }).addTo(map);
+            map.fitBounds(polyline.getBounds());
+          }
         };
     </script>
 </body>
