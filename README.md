@@ -105,6 +105,25 @@ pytest tests/
 - **Predictive Modeling**: Gradient Boosting, LSTMs for time-series data.
 - **Route Optimization**: Google OR-Tools for VRP solutions.
 
+### Database Setup
+Follow these steps to set up the database locally:
+
+1. Install PostgreSQL and ensure it is running.
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/translogi.git
+   cd translogi
+3. Create a PostgreSQL database:
+```sql
+CREATE DATABASE translogi;
+CREATE USER translogi_user WITH PASSWORD 'yourpassword';
+GRANT ALL PRIVILEGES ON DATABASE translogi TO translogi_user;
+```
+4. Run the setup script:
+```bash
+python setup_database.py
+```
+
 ---
 
 ## Acknowledgments
