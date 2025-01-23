@@ -1,0 +1,10 @@
+# Load the JSON file
+with open('city_delay_mapping.json', 'r') as f:
+    city_delay_mapping = json.load(f)
+
+# Example of using the mapping in real-time
+real_time_data = {'city': 'New York', 'other_features': 42}
+city = real_time_data['city']
+average_delay = city_delay_mapping.get(city, 0)  # Default to 0 if city not found
+
+print(f"City: {city}, Average Delay: {average_delay}")
