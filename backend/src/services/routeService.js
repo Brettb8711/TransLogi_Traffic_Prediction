@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 exports.getOptimalRoutes = async (warehouses, deliveries, trucks) => {
-    const GOOGLE_MAPS_API_KEY = 'AIzaSyDnu-pSM7KCDow0XodHoYjtFsIRyVOQkkY';
+    const GOOGLE_MAPS_API_KEY = 'Enter AP Key Here';
 
     const routes = [];
     for (let i = 0; i < warehouses.length; i++) {
