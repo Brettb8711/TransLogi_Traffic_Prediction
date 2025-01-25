@@ -1,11 +1,40 @@
-const { optimizeRoutes } = require('../services/routeService');
+const { saveAddresses } = require('../models/trafficModel');
+const { getOptimalRoutes } = require('../services/routeService');
 
-exports.handleRouteRequest = async (req, res) => {
+let requestCounter = 0;
+
+exports.optimizeRoutes = async (req, res) => {
+    const { warehouses, deliveries, trucks } = req.body;
+    const requestNum = ++requestCounter;
+
     try {
-        const { addresses } = req.body;
-        const routes = await optimizeRoutes(addresses);
-        res.status(200).json(routes);
+        // Save warehouse addresses to the database
+        for (let i = 0; i < warehouses.length; i++) {
+            await saveAddresses('warehouse', warehouses[i], requestNum);
+        }
+
+        // Save delivery addresses to the database
+        for (let i = 0; i < deliveries.length; i++) {
+            await saveAddresses('delivery', deliveries[i], requestNum);
+        }
+
+        // Save truck addresses to the database
+        for (let i = 0; i < trucks.length; i++) {
+            await saveAddresses('truck', trucks[i].warehouse, requestNum);
+        }
+
+        res.status(200).json({ message: 'Addresses saved successfully'});
     } catch (error) {
-        res.status(500).json({ error: 'Route optimization failed' });
+        console.error('Error saving addresses:', error);
+        res.status(500).json({ error: 'Error saving addresses' });
+    }
+
+    try {
+        // Call Google Route Optimization API
+        const routes = await getOptimalRoutes(warehouses, deliveries, trucks);
+        res.status(200).json({ message: 'Routes optimized successfully', routes });
+    } catch (error) {
+        console.error('Error optimizing routes:', error);
+        res.status(500).json({ error: 'Error optimizing routes' });
     }
 };

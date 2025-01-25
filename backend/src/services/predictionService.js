@@ -1,12 +1,18 @@
-const { queryDatabaseForPredictions, savePredictionsToDatabase } = require('../models/trafficModel');
+const tf = require('@tensorflow/tfjs-node');
+const path = require('path');
 
-exports.getPredictions = async (addresses) => {
-    const cachedPredictions = await queryDatabaseForPredictions(addresses);
-    if (cachedPredictions && isFresh(cachedPredictions.timestamp)) {
-        return cachedPredictions;
-    }
+const modelPath = path.join(__dirname, '../../src/modeling/src/modeling/traffic_delay_model.h5');
 
-    const predictions = await runMLModel(addresses); // ML model logic
-    await savePredictionsToDatabase(addresses, predictions);
-    return predictions;
+let model;
+
+exports.loadModel = async () => {
+    model = await tf.loadLayersModel(`file://${modelPath}`);
+};
+
+exports.predictTimeDelay = async (inputFeatures) => {
+    if (!model) await this.loadModel();
+
+    const inputTensor = tf.tensor([inputFeatures]);
+    const predictions = model.predict(inputTensor);
+    return predictions.dataSync()[0];
 };
