@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyDnu-pSM7KCDow0XodHoYjtFsIRyVOQkkY';
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
 const getLatLong = async (address) => {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${GOOGLE_MAPS_API_KEY}`;

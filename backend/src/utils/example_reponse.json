@@ -1,0 +1,84 @@
+{
+    "routes": [
+      {
+        "vehicleStartTime": "2024-02-13T00:00:00Z",
+        "vehicleEndTime": "2024-02-13T00:39:02Z",
+        "visits": [
+          {
+            "isPickup": true,
+            "startTime": "2024-02-13T00:00:00Z",
+            "detour": "0s"
+          },
+          {
+            "startTime": "2024-02-13T00:19:43Z",
+            "detour": "0s"
+          }
+        ],
+        "transitions": [
+          {
+            "travelDuration": "0s",
+            "waitDuration": "0s",
+            "totalDuration": "0s",
+            "startTime": "2024-02-13T00:00:00Z",
+            "routePolyline": {}
+          },
+          {
+            "travelDuration": "1183s",
+            "travelDistanceMeters": 8591,
+            "waitDuration": "0s",
+            "totalDuration": "1183s",
+            "startTime": "2024-02-13T00:00:00Z",
+            "routePolyline": {
+              "points": "}{ieFlkdjV?A@I?E@K?S@K?GB]@W?C?G@O?C@E?E@EB_AB_@?G?Q?KAQCm@?MAOAU?K?A?C?CAK?K?A?A?A?CAC?QAM?KASAE?C?CAEAC?ACGIO]s@ACAACCAECEAEEECIKSOYEIMWCGIMGKCIGMAAEI?ACGAC?C?AAE?C@a@?C?G@O@k@@O?]Bc@@k@@k@@c@Bq@@k@@]Bu@@e@@_@?OD{A@c@?I@]@O?C@i@BcAFq@?_@gAGeACk@G]Ew@SQGOGOKMEMGk@g@UOc@Uy@i@IGKIe@YMIYU_@UGEECEC]YkBoAYS]Q[OMEOEc@Oq@Sy@Ww@SA?OCKCQC[Eo@MSAe@EYGYCi@GgAMG?e@GGAYC[AkAEeAEW@I?EAM?GAG?IAIAGAEAKAOCGCIAWIc@I_@IEASEMCUEICECIAo@Ok@Ka@I]IGAc@G_@EA?SCOASCWCUAI?O?g@AUA_@A[AI?I?I?SAI@K?Q?A?KV_@?S?Q@u@Ba@@I@eADG@m@Bk@Bc@@K@m@BQ@_@BK?_@BY@e@BY@I@Q@YDE?]DYFC@[F]LMDE@GBUJGDEBKFMHOJA@UPWVA?WXY^SVQV[d@GHq@fAGJCBQTILA@EFOPIHIJSRQPUPSNYNC@OHYLSFMDODYHI@C?QBMBYBQ?M?M@SAI?G?CAI?KAWCa@I]IMEOEMEOIQGMGQK]Og@[]QUMg@WMG]MOGMEYIQGOCWGg@Ic@ESCUAaAGSASAU?M?e@Ae@AE?gA?QPA@W@c@Bo@DU@UB[@WBg@BM@SBM?O@K@K@O@OBKBKDKBKDKDA@EBGBGDEDGDWTA@EFEFMLEHQVORMNINQTSZQVA@A@g@r@GJA@CDEFKNQ\\MPKPe@|@[h@KPCHEHEJENEPCPCPAL?\\@NBNDNBLFNFNLRVf@FLDLDJBLBJ@L@R?f@ANAZARC^EjAElAAPCtAAx@?FAf@EfFC`D?p@Ar@Ap@Ax@Ax@?NAd@?BAVA\\MV?BAJGj@Gb@Gj@CPGz@ANAB?FGj@C^?BAFEl@M|AAHC\\IjAENCHCHCDCBCBEDGDC@GBMBA?IFo@OSEMEyAc@cBs@[Oc@SGEAA]U_Ao@]Yk@JYHUFa@JuAXgAVe@HQB_AJs@L_@FA?A?iBT{ARuAPeALWBYDgAL_AJ_@De@Fw@H_ALYB]Di@Hu@Hs@H]HC?_@F_@DYDc@D_@Dy@Ja@D}APYDI@E?QBO@uAPWDYBMBQ@E@C?YD}@L]Da@Fy@Hs@Fk@Hs@Fi@Fa@F_@DYB[Hw@HI@_AJ[DWDMBi@FO@w@JWDK@e@FM@g@Di@FSB]F_@F}@J[Da@D_@DUBeALG@UBe@F]F_@DiANoANu@F_@Di@Fq@JK@QB[D_ALs@JUBaAJy@J]D[@c@DgALg@F[Hw@Hq@HU@[DSsCMqBCWDSRC"
+            },
+            "routeToken": "CvMBCpoBMpcBGnwKJwIWCTqXLDcqhgCkvimDkSzlkpMC-vjWAaDKOd3tCNPWjgKY9ZoCABIkp-WKdQga3q4YIIiUZ4H3B1KNfwDrYPeL9O2eVJwjIWAzanUeGgsAIAW-AdIBAg8hCioJIAJwdXUNbR4bPWHfPD9FaRDGPkjIybzk-fDMxbIBIhdUUlBpWnQ2NkJNeTRrZVFQdy02ZjhRVRAFGjsKOQoYCg0KAggBEQAAAAAAgGZAEQrXo3A9YZRAEgAiGQoXVFJQaVpzV1ZCTXk0a2VRUHctNmY4UVUoASIVANvZE2tQPAWkpIsvQ700Jn8qVo_m"
+          },
+          {
+            "travelDuration": "1159s",
+            "travelDistanceMeters": 8765,
+            "waitDuration": "0s",
+            "totalDuration": "1159s",
+            "startTime": "2024-02-13T00:19:43Z",
+            "routePolyline": {
+              "points": "{~teF`oejVHARCjAOr@IFx@NzBHtA?HBXBl@ZI^ENAl@It@IRC`AM~@KZEZE`@Gf@G`@GHAZEj@EZAfBUTCfC]ZE\\Gj@Gl@Gp@IREZE`AMRCf@E`@GVEXCj@G\\Ez@K\\Gf@ELCHA`@G\\C\\GRA|@MfAM`@Ep@Ih@G|@K\\ERCTCr@I~@K\\GXEPAp@I|@K\\EXE~@QbAKDATAzDe@VEd@ELALAVEVCNCHAVCRCLC^EVEPAZGj@Gn@I~ASj@I^E~BW^ENAtASn@GZE^E`AKd@I\\GXE\\Eb@Gr@Kd@IPEXGbB_@l@MXGb@I`AUp@O@AbAUREHC`@EDAdBa@TEr@Oj@OHCNCXIJEFEPKLKJGDAB?@AJ?d@@VBB?B@J@`@FL?B@B?r@BV@FHFDBBDDDBDBDDBDDFBHBF@F@J@F?H@HAH?HAHCFAHCFEFCFEDEDEDGBKDG@I?G?GAKAIEECGEEEEEGICKCICKAMAQ?Q@Q@UBc@Dc@Fw@F}@?C?CISB_@Be@B]?K?I@S@o@@q@@_@?g@@eB@y@@g@?}@@{@@s@?Y?[@m@?GByB@O?c@@]?[@a@Bc@Bq@JyBFq@Fu@Fk@BY@KToBJO?ALu@Da@Fe@@UBa@Bg@Bi@Dg@@O@OBO@M@EBSBMDQFYDQHYN]JWHSVc@LSLQZ]HIZSJGDAHCDAJEB?DADABAD?DABAD?FALAXCp@EH?PC@?HQjCK^C\\CPANAz@CJAB?VAj@CVAB?b@A@?^@R?Z@\\Bf@Ft@LXFNFF@RFPFTHLHHBLFFBHFLFPHXPVLPJDBPHRLb@RD@`@NB@XHXHRBNBH@L@PB@?Z@N?H?J?H?PAD?PAHALAPCVGJADANERIVIBALGXOZQROVSFILKPSNO\\c@NURWLST_@PY@?LSHMLSLOT[BEPQJMHKHI@?JKLIPONITOVMZM@?NEPGPENCXE@?ZEXC`@C\\CH?p@EH?VAfAGl@C\\C\\A@?v@EjAE`AEFAD?TAX?B?X?l@?d@BjAFNXXFFB\\HDBj@Nl@NVFFBXHLBR@@@NB^HJBB@B?JB@@@?B@D@XFLBHDNHJT@BDJJZDRBJDPBH@DBD@BDFBBDFFDFD@?@@B@D?B@D?B?D?@?B?BAB?BABA@?DCFIPQBCBALQBE@AV_@DIPWLMLOHGHGHGJELGFADCFADAHAH?B?F?L@J@H@HB\\Jf@Nl@NLDPDZHLDNDZHt@TL@D?L?JAFANE^IVGVEF?F?D?F?F@B@D@TFjCx@RFPHVJz@f@TNB@VPb@Xb@Vf@ZDDHD\\TXPLHb@ZJHTLPH\\V`@VPJb@\\XNXNVLTFv@T^Dn@H~@FjADGp@CbAAh@?BANA\\?HAb@EzA?NA^Ad@Ct@A\\Aj@Cp@Ab@Aj@Aj@Cb@?\\ANAj@AN?F?BA`@?B@D?@?B@BBF?@DH@@FLBHFJHLBFLVDHNXJRBHDD@DBD@DBB@@@B\\r@HNBF?@@B@D?B?B@D@R?J@L?P@B?B?@?@?@?J@J?B?B?@?J@T@N?LBl@@P?J?P?FC^C~@AD?DAD?BAN?F?BAVC\\?FAJ?RAJ?DAH?@"
+            },
+            "routeToken": "CvsBCqIBMp8BGoMBCisCFgtG1Hlkf4MAwCL3qQKkpALomZ4Ci7meAozjjAPP34kDmSPq3BeDoWEAEiQzanUe6iFiW5kIYp6_RksOUl0YSWqIhERXJcl7xeckmqblinUaCgALCSuQBwIAdR4qCTkbWSARAAocAzICAgE9aRDGPkU-QYY-SIWx4e-az6a28QEiF1RSUGladU8zQk15cmtlUVBvZnVyd0FzEAUaOwo5ChgKDQoCCAERAAAAAACAZkARCtejcD0ulEASACIZChdUUlBpWnQtVkJNeXJrZVFQb2Z1cndBcygBIhUA29kTa1qXXaY59KJpCuXOkxw-Vkw"
+          }
+        ],
+        "metrics": {
+          "performedShipmentCount": 1,
+          "travelDuration": "2342s",
+          "waitDuration": "0s",
+          "delayDuration": "0s",
+          "breakDuration": "0s",
+          "visitDuration": "0s",
+          "totalDuration": "2342s",
+          "travelDistanceMeters": 17356
+        },
+        "routeCosts": {
+          "model.vehicles.cost_per_kilometer": 17.356
+        },
+        "routeTotalCost": 17.356
+      }
+    ],
+    "metrics": {
+      "aggregatedRouteMetrics": {
+        "performedShipmentCount": 1,
+        "travelDuration": "2342s",
+        "waitDuration": "0s",
+        "delayDuration": "0s",
+        "breakDuration": "0s",
+        "visitDuration": "0s",
+        "totalDuration": "2342s",
+        "travelDistanceMeters": 17356
+      },
+      "usedVehicleCount": 1,
+      "earliestVehicleStartTime": "2024-02-13T00:00:00Z",
+      "latestVehicleEndTime": "2024-02-13T00:39:02Z",
+      "totalCost": 17.356,
+      "costs": {
+        "model.vehicles.cost_per_kilometer": 17.356
+      }
+    }
+  }
+      

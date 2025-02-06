@@ -1,18 +1,13 @@
-const tf = require('@tensorflow/tfjs-node');
-const path = require('path');
-
-const modelPath = path.join(__dirname, '../../src/modeling/src/modeling/traffic_delay_model.h5');
-
-let model;
-
-exports.loadModel = async () => {
-    model = await tf.loadLayersModel(`file://${modelPath}`);
-};
+const axios = require('axios');
 
 exports.predictTimeDelay = async (inputFeatures) => {
-    if (!model) await this.loadModel();
-
-    const inputTensor = tf.tensor([inputFeatures]);
-    const predictions = model.predict(inputTensor);
-    return predictions.dataSync()[0];
+    try {
+        const response = await axios.post('http://127.0.0.1:5001/predict', {
+            input_features: inputFeatures
+        });
+        return response.data.prediction;
+    } catch (error) {
+        console.error('Error fetching prediction from Flask API:', error);
+        throw new Error('Error fetching prediction from Flask API');
+    }
 };
