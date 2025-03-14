@@ -10,7 +10,9 @@ logs/
 # Dependency directories
 node_modules/
 jspm_packages/
-backend/node_modules/
+backend/node_modules/ 
+backend/node_modules/.package-lock.json
+package-lock.json
 
 # Build directories
 dist/
