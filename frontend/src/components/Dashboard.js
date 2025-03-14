@@ -1,18 +1,22 @@
 import React from 'react';
+import MapVisualization from './MapVisualization';
+import Metrics from './Metrics';
+import Trends from './Trends';
+import '../styles/Dashboard.css'; 
 
-const Dashboard = ({ routes, metrics }) => {
+function Dashboard({ polylines }) {
     return (
-        <div>
-            <h2>Optimized Routes</h2>
-            {/* Use a library like react-leaflet or Google Maps to show the map */}
-            <div id="map">Map Visualization Here</div>
-
-            <h2>Metrics</h2>
-            <p>Delivery Times: {metrics.deliveryTimes}</p>
-            <p>Cost Efficiency: {metrics.costEfficiency}</p>
-            <p>Vehicle Utilization: {metrics.vehicleUtilization}</p>
+        <div className="dashboard-container">
+            <h2>Route Visualization</h2>
+            <div className="content-container">
+                <Metrics />
+                <div className="map-container">
+                    <MapVisualization polylines={polylines} />
+                </div>
+                <Trends />
+            </div>
         </div>
     );
-};
+}
 
 export default Dashboard;
