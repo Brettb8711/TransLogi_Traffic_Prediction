@@ -164,7 +164,13 @@ function RouteForm({ setTabIndex, setPolylines }) {
                     ))}
                     <button type="button" onClick={addOrder}>Add Order</button>
                 </div>
-                <button type="submit">Optimize Routes</button>
+                <div style={{textAlign: 'center'}}>
+                    <button id='SubmitButton'
+                    type="submit">
+                    Optimize Routes
+
+                    </button>
+                </div>
             </form>
         </div>
     );

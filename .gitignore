@@ -7,6 +7,10 @@ yarn-error.log
 logs/
 *.log
 
+# Jupyter Notebooks
+*.ipynb
+.ipynb_checkpoints
+
 # Dependency directories
 node_modules/
 jspm_packages/
